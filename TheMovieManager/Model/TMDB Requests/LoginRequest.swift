@@ -9,12 +9,12 @@
 import Foundation
 
 struct LoginRequest: Codable {
-    let userName: String
+    let username: String
     let password: String
     let requestToken: String
     
     enum CodingKeys: String, CodingKey {
-        case userName
+        case username = "username"
         case password
         case requestToken = "request_token"
     }

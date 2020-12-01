@@ -36,22 +36,23 @@ class LoginViewController: UIViewController {
             //print(TMDBClient.Auth.requestToken)
             //Required a reference to self for the variables below since they're global properties
             DispatchQueue.main.async {
-                print("Calling Login Function")
-                TMDBClient.login(username: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "", completion: self.handleLoginResponse(success:Error:))
+                //print("Calling Login Function")
+            TMDBClient.login(username: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "", completion: self.handleLoginResponse(success:Error:))
             }
+
         }
     }
     
     func handleLoginResponse(success: Bool, Error: Error?) {
-        print("Handle Login Response Works")
+        //print("Handle Login Response Works")
         if success {
-            print("Create Session ID is Called")
+            //print("Create Session ID is Called")
             TMDBClient.createSessionId(completion: handleSessionResponse(success:Error:))
         }
     }
     
     func handleSessionResponse(success: Bool, Error: Error?) {
-        print("Handle Session Response Works")
+        //print("Handle Session Response Works")
         if success {
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "completeLogin", sender: nil)
@@ -59,5 +60,6 @@ class LoginViewController: UIViewController {
         }
         
     }
+    
 
 }
