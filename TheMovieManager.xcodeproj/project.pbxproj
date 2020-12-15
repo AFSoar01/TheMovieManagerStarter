@@ -35,6 +35,7 @@
 		2316888D2122322D003C820E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316888C2122322D003C820E /* Colors.swift */; };
 		2316888F2122646A003C820E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316888E2122646A003C820E /* GradientView.swift */; };
 		2316889121226AE7003C820E /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316889021226AE7003C820E /* LoginTextField.swift */; };
+		E5E6D813258843BB000B1786 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E6D812258843BB000B1786 /* APIKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		2316888C2122322D003C820E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2316888E2122646A003C820E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		2316889021226AE7003C820E /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		E5E6D812258843BB000B1786 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			children = (
 				2316886B2121CAF6003C820E /* TMDBClient.swift */,
 				231688882121CC10003C820E /* TMDBTypes.swift */,
+				E5E6D812258843BB000B1786 /* APIKey.swift */,
 			);
 			path = "TMDB Client";
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				231688652121CA51003C820E /* FavoritesViewController.swift in Sources */,
 				231688492121C92C003C820E /* AppDelegate.swift in Sources */,
 				2316889121226AE7003C820E /* LoginTextField.swift in Sources */,
+				E5E6D813258843BB000B1786 /* APIKey.swift in Sources */,
 				2316887D2121CB9A003C820E /* SessionResponse.swift in Sources */,
 				231688792121CB74003C820E /* RequestTokenResponse.swift in Sources */,
 				231688832121CBE3003C820E /* LoginRequest.swift in Sources */,

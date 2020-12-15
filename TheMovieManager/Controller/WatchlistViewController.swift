@@ -19,9 +19,7 @@ class WatchlistViewController: UIViewController {
         
         _ = TMDBClient.getWatchlist() { movies, error in
             MovieModel.watchlist = movies
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            self.tableView.reloadData()
         }
     }
     
@@ -52,11 +50,19 @@ extension WatchlistViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell")!
-        
         let movie = MovieModel.watchlist[indexPath.row]
-        
         cell.textLabel?.text = movie.title
-        
+        cell.imageView?.image = UIImage(named: "PosterPlaceholder")
+        if let posterPath = movie.posterPath {
+            TMDBClient.downloadPosterImage(posterPath: posterPath) { (data, error) in
+                guard let data = data else {
+                    return
+                }
+                let image = UIImage(data: data)
+                cell.imageView?.image = image
+                cell.setNeedsLayout()
+            }
+        }
         return cell
     }
     
