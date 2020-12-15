@@ -10,6 +10,7 @@ import Foundation
 
 class MyAPIKey {
     
+    //This is my API Key
     static let MyAPIKey = "7179587d60faf4f79d3952f873f04d8f"
 
     }

@@ -10,6 +10,7 @@ import Foundation
 
 class TMDBClient {
     
+    //Create a new file in TMDB Client with MyAPIKey Class and a var called MyAPIKey to store your API Key
     static let apiKey = MyAPIKey.MyAPIKey
     
     struct Auth {
